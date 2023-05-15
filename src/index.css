@@ -1,3 +1,16 @@
+html {
+  background-image: linear-gradient(to bottom, #005E54, #003547);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+h1 {
+  color: #E1523D;
+  -webkit-text-stroke: 1px #ED8B16;
+  font-size: 3rem;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,7 +18,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(255, 249, 240);
+  /* background-image: url("background.png");
+  background-repeat: repeat;
+  background-size: 2%; */
+  /* background-color: rgb(255, 249, 240); */
+  
 }
 
 code {
@@ -17,21 +34,25 @@ code {
   text-align: right;
   margin-bottom: 50px;
   padding: 0 25px;
-  background-color: azure;
+  background-color: #ED8B16;
 }
 
 a {
-  color: #3d8fac;
+  color: #ED8B16;
   text-decoration: none;
   transition: all .25s ease;
 }
 
 a:hover {
-  color: #5d8cae;
+  color: #E1523D;
   text-decoration: underline;
 }
 
 .main-nav a {
   display: inline-block;
   padding: 25px 25px;
+}
+
+.simplebar-scrollbar::before {
+  background-color: red;
 }

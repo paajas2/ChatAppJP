@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from '../firebase';
+import '../App.css';
 
 class Chatbox extends React.Component {
     constructor(props) {
@@ -36,13 +37,13 @@ class Chatbox extends React.Component {
                     {this.state.chats.map(chat => {
                         const postDate = new Date(chat.date);
                         return(
-                            <li key={chat.id}>
+                            <li className="message" key={chat.id}>
                                 <em>{postDate.getDate() + '/' + (postDate.getMonth()+1)}</em>
                                 <strong>{chat.user}:</strong>
                                 {chat.message}
                             </li>
-                        )
-                    })}
+                        );
+                    }).reverse()}
                 </ul>
             </div>
         );

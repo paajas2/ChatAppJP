@@ -3,6 +3,7 @@ import './App.css';
 import Chatbox from './components/Chatbox';
 import {Link} from 'react-router-dom';
 import firebase from './firebase';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,16 +38,17 @@ class App extends React.Component {
         <h1>Chat App</h1>
         {this.props.user && (
           <div className="allow-chat">
-            <Chatbox />
+            <Chatbox className="chatbox"/>
             <form className="message-from" onSubmit={this.onSubmit}>
               <input
+                className="textInput"
                 type="text"
                 name="message"
                 id="message"
                 value={this.state.message}
                 placeholder="Enter a message..."
                 onChange={this.onChange} />
-              <button>Send</button>
+              <button><SendOutlinedIcon/></button>
             </form>
           </div>
         )}
